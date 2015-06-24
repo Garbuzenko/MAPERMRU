@@ -1,0 +1,8 @@
+RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} ^www.an-rakurs.ru$ [NC]
+#RewriteRule ^(.*)$ http://an-rakurs.ru/$1 [R=301,L]
+
+RewriteRule ^([0-9a-z-]+)$ index.php?mod=$1 [L]
+RewriteRule ^([0-9a-z-]+)/([0-9a-z-]+)$ index.php?mod=$1&val=$2 [L]
+RewriteRule ^([0-9a-z-]+)/([0-9a-z-]+)/([0-9a-z-]+)$ index.php?mod=$1&val=$2&val2=$3 [L]
